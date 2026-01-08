@@ -17,6 +17,10 @@ mongoose
 
 // Routes
 app.use("/api/products", productRoutes);
+// Temporary products API (test)
+app.get("/api/products", (req, res) => {
+  res.json([]);
+});
 
 // Test route
 app.get("/", (req, res) => {
@@ -27,3 +31,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
